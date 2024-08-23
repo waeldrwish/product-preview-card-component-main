@@ -1,0 +1,104 @@
+:root {
+    /* Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    /* Natural */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --text-size: 14px;
+  }
+  
+  body {
+    font-size: var(--text-size);
+    margin: 0;
+    padding: 0;
+    background-color: var(--Cream);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: var(--White);
+    position: relative;
+  }
+  
+  .card .image {
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+    background: url("images/image-product-desktop.jpg") no-repeat;
+    background-size: cover;
+  }
+  
+  .card .product-info {
+    padding: 20px;
+  }
+  
+  .card .product-info .perfume {
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 0.3em;
+  }
+  
+  .card .product-info h1 {
+    font-size: 2em;
+    font-weight: 800;
+  }
+  
+  .card .product-info p {
+    line-height: 1.5;
+    color: var(--Dark-grayish-blue);
+  }
+  
+  .price {
+    font-size: 24px;
+    color: var(--Dark-cyan);
+    padding: 10px 10px 10px 0;
+    font-weight: 800;
+  }
+  
+  del {
+    text-align: center;
+    color: var(--Dark-grayish-blue);
+  }
+  
+  button {
+    padding: 10px;
+    background-color: var(--Dark-cyan);
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darkslategray;
+  }
+  
+  @media (max-width: 400px) {
+    .card {
+      flex-wrap: wrap;
+      margin: 25px;
+    }
+    .card .image {
+      width: 100%;
+      height: 200px; /* Add height to ensure visibility */
+      border-radius: 10px 10px 0 0;
+      background: url("images/image-product-mobile.jpg") no-repeat center center;
+      background-size: cover; /* Ensure the image covers the container */
+    }
+  }
+  
+  
